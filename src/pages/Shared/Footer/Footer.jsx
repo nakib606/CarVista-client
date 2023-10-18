@@ -3,7 +3,7 @@ import car from "../../../../public/footer-car.jpg";
 import { FiFacebook, FiInstagram, FiTwitter, FiYoutube } from "react-icons/fi";
 const Footer = () => {
   return (
-    <div className=" absolute w-full bottom-0">
+    <div className="mt-20">
       <div
         style={{
           backgroundImage: `url(${car})`,

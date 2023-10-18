@@ -31,7 +31,7 @@ const Navbar = () => {
     </div>
   );
   return (
-    <div className="bg-[#404040]">
+    <div className="bg-[#40404099] fixed top-0 w-full">
       <div className="navbar max-w-6xl py-0 mx-auto">
         <div className="navbar-start">
           <div className="flex items-center">
