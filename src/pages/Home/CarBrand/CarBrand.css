@@ -1,0 +1,11 @@
+.card img {
+  filter: grayscale(100);
+  transition: all 0.5s;
+}
+.card:hover img {
+  filter: grayscale(0);
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
