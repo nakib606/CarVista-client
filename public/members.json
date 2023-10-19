@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Adams Signature",
+    "Designation": "Car Dealer",
+    "image": "https://i.ibb.co/yFsNz7p/11.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Jemmy Harison",
+    "Designation": "Car Dealer",
+    "image": "https://i.ibb.co/z7rTtxL/2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Michel Clerk",
+    "Designation": "Car Dealer",
+    "image": "https://i.ibb.co/hLbDd8r/12.jpg"
+  }
+]

@@ -1,0 +1,13 @@
+.member-outer:hover {
+  background-color: black;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.member-outer:hover .card-body > p {
+  color: white;
+}
+
+.member-outer:hover .social-icon {
+  background: #fa3736;
+  transition: all 0.5s;
+}
