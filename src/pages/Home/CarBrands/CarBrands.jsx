@@ -8,7 +8,7 @@ const CarBrands = () => {
   console.log(brands);
   return (
     <div className="mx-2 lg:mx-0">
-      <div className="max-w-6xl mx-auto mt-10 md:mt-20 ">
+      <div className="max-w-6xl mx-auto mt-10 md:mt-14 ">
         <SectionTitle
           title="Car Brands"
           description="Carvista dealership presents an extensive collection, featuring renowned car brands such as Toyota, Ford, BMW, Mercedes-Benz, Tesla, and Honda."

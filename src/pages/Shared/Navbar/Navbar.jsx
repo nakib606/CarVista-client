@@ -66,12 +66,16 @@ const Navbar = () => {
             >
               {navLinks}
               <Link className=" lg:hidden  mt-4" to="/login">
-                <button className="text-primary-color">Login</button>
+                <button className="bg-primary-color text-white px-4 py-2 rounded-md duration-500 hover:bg-white hover:text-primary-color">
+                  Login
+                </button>
               </Link>
             </ul>
           </div>
           <Link className="hidden lg:block" to="/login">
-            <button className="text-primary-color">Login</button>
+            <button className=" bg-primary-color text-white px-4 py-2 rounded-md duration-500 hover:bg-white hover:text-primary-color">
+              Login
+            </button>
           </Link>
         </div>
       </div>
