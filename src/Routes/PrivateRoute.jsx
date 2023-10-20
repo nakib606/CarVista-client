@@ -9,7 +9,11 @@ const PrivateRoute = ({ children }) => {
   //   console.log(location);
 
   if (loading) {
-    return <span className="loading loading-spinner loading-lg"></span>;
+    return (
+      <div className="max-w-6xl mx-auto mt-40 mb-36 flex justify-center">
+        <span className="loading  loading-spinner loading-lg"></span>
+      </div>
+    );
   }
   if (user) {
     return children;
