@@ -7,9 +7,9 @@ import Slider from "./Slider";
 
 const BrandProducts = () => {
   const { products } = useContext(AuthContext);
-  console.log(products);
+  //   console.log(products);
   const { brandname } = useParams();
-  console.log(brandname);
+  //   console.log(brandname);
   const [brandData, setBrandData] = useState([]);
 
   useEffect(() => {

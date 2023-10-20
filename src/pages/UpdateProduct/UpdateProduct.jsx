@@ -28,15 +28,18 @@ const UpdateProduct = () => {
       rating,
     };
 
-    console.log(updatedProduct);
+    // console.log(updatedProduct);
     // sending product to server
-    fetch(`http://localhost:5000/updated/${loaderData._id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updatedProduct),
-    })
+    fetch(
+      `https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/updated/${loaderData._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updatedProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {

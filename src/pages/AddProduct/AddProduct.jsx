@@ -15,16 +15,19 @@ const AddProduct = () => {
     const rating = form.rating.value;
 
     const product = { img, name, brand, type, price, description, rating };
-    console.log(product);
+    // console.log(product);
 
     // sending product to server
-    fetch("http://localhost:5000/addproduct", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(product),
-    })
+    fetch(
+      "https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/addproduct",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(product),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {

@@ -8,13 +8,13 @@ const BrandDetails = () => {
   const { products } = useContext(AuthContext);
   //   console.log(products);
   const loaderData = useLoaderData();
-  console.log(loaderData);
+  //   console.log(loaderData);
   const { _id, img, name, brand, type, price, description, rating } =
     loaderData;
 
   const handleAddToCart = (id) => {
     const selectedProduct = products.filter((product) => product._id === id);
-    console.log(selectedProduct);
+    // console.log(selectedProduct);
     const data = {
       img,
       name,
@@ -27,7 +27,7 @@ const BrandDetails = () => {
     // console.log(data);
 
     // sending product to server
-    fetch("http://localhost:5000/details", {
+    fetch("https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/details", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

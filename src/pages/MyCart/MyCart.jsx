@@ -6,7 +6,7 @@ const MyCart = () => {
   const [carts, setCarts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/details")
+    fetch("https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/details")
       .then((res) => res.json())
       .then((data) => setCarts(data));
   }, []);

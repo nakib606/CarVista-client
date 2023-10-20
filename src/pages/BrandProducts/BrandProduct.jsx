@@ -5,10 +5,6 @@ import Swal from "sweetalert2";
 const BrandProduct = ({ data }) => {
   const { _id, img, name, brand, type, price, description, rating } = data;
 
-  const handleUpdate = (id) => {
-    console.log(id);
-  };
-
   return (
     <div className="car-card   bg-white shadow-md border rounded-lg relative">
       <div className="w-60 mx-auto h-36 ">

@@ -49,7 +49,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/details/${params.id}`),
+          fetch(
+            `https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/details/${params.id}`
+          ),
       },
       {
         path: "/update/:id",
@@ -59,7 +61,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/update/${params.id}`),
+          fetch(
+            `https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/update/${params.id}`
+          ),
       },
       {
         path: "/login",

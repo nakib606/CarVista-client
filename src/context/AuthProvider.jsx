@@ -28,7 +28,9 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allproducts")
+    fetch(
+      "https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/allproducts"
+    )
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

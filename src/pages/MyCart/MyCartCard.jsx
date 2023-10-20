@@ -17,9 +17,12 @@ const MyCartCard = ({ cart, carts, setCarts }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/addproduct/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/addproduct/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {

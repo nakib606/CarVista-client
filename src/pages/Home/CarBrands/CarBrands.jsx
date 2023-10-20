@@ -5,7 +5,7 @@ import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 
 const CarBrands = () => {
   const { brands } = useContext(AuthContext);
-  console.log(brands);
+  // console.log(brands);
   return (
     <div className="mx-2 lg:mx-0">
       <div className="max-w-6xl mx-auto mt-10 md:mt-14 ">

@@ -2,7 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import bg from "../../../../public/LoginRegister/2.jpg";
 import "./Login.css";
 import { FcGoogle } from "react-icons/fc";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../../context/AuthProvider";
 import Swal from "sweetalert2";
 
@@ -22,7 +22,7 @@ const Login = () => {
     // signInUser
     signInUser(email, password)
       .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
         form.reset();
         Swal.fire({
           position: "top-center",

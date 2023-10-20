@@ -32,7 +32,7 @@ const Register = () => {
 
     createUser(email, password)
       .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
         profileUpdate(name, photoUrl)
           .then(() => {})
           .catch(() => {});
@@ -47,7 +47,7 @@ const Register = () => {
         navigate("/");
       })
       .catch((error) => {
-        console.log(error.message);
+        // console.log(error.message);
         setError(error.message);
       });
   };
