@@ -1,4 +1,5 @@
 import { AiFillStar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const BrandProduct = ({ data }) => {
@@ -6,21 +7,6 @@ const BrandProduct = ({ data }) => {
 
   const handleUpdate = (id) => {
     console.log(id);
-  };
-
-  const handleExplore = () => {
-    const swalWithBootstrapButtons = Swal.mixin({
-      customClass: {
-        confirmButton: "btn btn-danger",
-      },
-      buttonsStyling: false,
-    });
-
-    swalWithBootstrapButtons.fire({
-      title: `${name} - ${brand}`,
-      text: description,
-      confirmButtonText: "close",
-    });
   };
 
   return (
@@ -41,18 +27,18 @@ const BrandProduct = ({ data }) => {
           <span className=" text-black">{rating}</span>
         </p>
         <div className="card-actions justify-between mt-6">
-          <button
-            onClick={handleExplore}
+          <Link
+            to={`/details/${_id}`}
             className="btn bg-black border-none text-white duration-300 hover:bg-primary-color  capitalize"
           >
-            Explore
-          </button>
-          <button
-            onClick={() => handleUpdate(_id)}
+            Details
+          </Link>
+          <Link
+            to={`/update/${_id}`}
             className="btn bg-primary-color border-none hover:bg-red-600 text-white capitalize"
           >
             Update
-          </button>
+          </Link>
         </div>
       </div>
     </div>

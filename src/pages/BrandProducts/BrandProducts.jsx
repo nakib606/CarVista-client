@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import BrandProduct from "./BrandProduct";
 import { AuthContext } from "../../context/AuthProvider";

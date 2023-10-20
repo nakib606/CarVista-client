@@ -6,34 +6,40 @@ const MyCart = () => {
   const [carts, setCarts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/addproduct")
+    fetch("http://localhost:5000/details")
       .then((res) => res.json())
       .then((data) => setCarts(data));
   }, []);
 
   return (
     <div className="max-w-6xl mx-auto mt-32 mb-20">
-      <div className="mx-4 lg:mx-0">
-        {carts ? (
-          <SectionTitle
-            title="Available Vehicles"
-            description="Find your perfect vehicles that you dreamed of."
-          ></SectionTitle>
-        ) : (
-          ""
-        )}
+      {carts.length > 0 ? (
+        <div className="mx-4 lg:mx-0">
+          {carts ? (
+            <SectionTitle
+              title="Your Vehicles"
+              description="Find your perfect vehicles that you dreamed of."
+            ></SectionTitle>
+          ) : (
+            ""
+          )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 mt-10">
-          {carts.map((cart) => (
-            <MyCartCard
-              key={cart._id}
-              cart={cart}
-              carts={carts}
-              setCarts={setCarts}
-            ></MyCartCard>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 mt-10">
+            {carts.map((cart) => (
+              <MyCartCard
+                key={cart._id}
+                cart={cart}
+                carts={carts}
+                setCarts={setCarts}
+              ></MyCartCard>
+            ))}
+          </div>
         </div>
-      </div>
+      ) : (
+        <p className="text-center  lg:text-2xl text-black mx-2 lg:mx-0">
+          You do not added any product...
+        </p>
+      )}
     </div>
   );
 };
