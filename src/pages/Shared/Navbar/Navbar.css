@@ -44,3 +44,6 @@ li > a:hover {
 .dropdown-content div li {
   width: max-content;
 }
+.log {
+  width: max-content;
+}

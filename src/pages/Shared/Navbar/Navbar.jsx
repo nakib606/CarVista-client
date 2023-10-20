@@ -76,7 +76,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu dropdown-content mt-4 z-[1] shadow bg-base-100 rounded-lg ps-4 "
+              className="menu duration-1000 dropdown-content mt-4 z-[1] shadow bg-base-100 rounded-lg ps-4 "
             >
               {navLinks}
               {user ? (
@@ -98,7 +98,7 @@ const Navbar = () => {
                 </div>
               ) : (
                 <Link
-                  className=" lg:hidden  mt-4 bg-primary-color text-white px-4 py-2 rounded-md duration-500 hover:bg-white hover:text-primary-color"
+                  className=" lg:hidden  mt-4 bg-primary-color text-white px-4 py-2 rounded-md duration-500 hover:bg-white hover:text-primary-color log"
                   to="/login"
                 >
                   Login
