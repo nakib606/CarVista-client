@@ -7,6 +7,7 @@ import Login from "../pages/Shared/Login/Login";
 import Register from "../pages/Shared/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "../pages/NotFound/NotFound";
+import BrandProducts from "../pages/BrandProducts/BrandProducts";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/brand/:brandname",
+        element: <BrandProducts></BrandProducts>,
       },
       {
         path: "/login",

@@ -11,7 +11,7 @@ const NotFound = () => {
   return (
     <div className="h-[100vh] flex flex-col justify-center items-center  relative mt-0">
       <img className="w-60 h-60 md:w-80 md:h-80" src={notFound} />
-      <p className="text-red-600 text-center ">{error.error.message}</p>
+      <p className="text-red-600 text-center ">{error.error?.message}</p>
       <button
         onClick={handleBackToHome}
         className="btn mt-8 bg-primary-color text-white duration-500 border-none hover:bg-black hover:text-white font-bold text-lg"

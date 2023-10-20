@@ -8,7 +8,10 @@ const CarBrand = ({ brand }) => {
         <img src={img} alt="Shoes" className="w-48 " />
       </div>
       <div className="text-center mb-4 ">
-        <Link className="duration-500 font-semibold text-primary-color text-lg">
+        <Link
+          to={`/brand/${brandName}`}
+          className="duration-500 font-semibold text-primary-color text-lg"
+        >
           {brandName}
         </Link>
       </div>

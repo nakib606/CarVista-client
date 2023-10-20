@@ -19,11 +19,18 @@ const AuthProvider = ({ children }) => {
   const [brands, setBrands] = useState([]);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     fetch("/brands.json")
       .then((res) => res.json())
       .then((data) => setBrands(data));
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/allproducts")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
   }, []);
 
   const createUser = (email, password) => {
@@ -74,6 +81,7 @@ const AuthProvider = ({ children }) => {
     profileUpdate,
     logOut,
     loading,
+    products,
   };
 
   return (
