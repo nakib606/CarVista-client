@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import bg from "../../../public/ap-1.jpg";
 import "./AddProduct.css";
 
@@ -26,6 +27,16 @@ const AddProduct = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        if (data.insertedId) {
+          form.reset();
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Product added successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
         console.log(data);
       });
   };
