@@ -39,7 +39,15 @@ const UpdateProduct = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        if (data.modifiedCount > 0) {
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Product Updated successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
       });
   };
 

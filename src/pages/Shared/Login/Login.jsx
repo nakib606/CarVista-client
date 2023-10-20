@@ -10,7 +10,8 @@ const Login = () => {
   const { signInUser, signInWithGoogle } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
+  const [error, setError] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -33,7 +34,7 @@ const Login = () => {
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        console.log(error);
+        setError(error.message);
       });
   };
 
@@ -107,6 +108,7 @@ const Login = () => {
               Login
             </button>
           </div>
+          <p className="text-red-600">{error}</p>
           <p className="text-lg text-white my-4">Or Login with</p>
           <button
             onClick={hanldeGoogleSignIn}
