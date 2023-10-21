@@ -129,7 +129,7 @@ const Register = () => {
               />
             </div>
           </div>
-          <p className="text-red-600">{error}</p>
+          <p className="text-red-600 font-semibold bg-white p-1">{error}</p>
           <div className="form-control mt-6">
             <button
               type="submit"

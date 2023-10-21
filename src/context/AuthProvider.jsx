@@ -19,7 +19,6 @@ const AuthProvider = ({ children }) => {
   const [brands, setBrands] = useState([]);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     fetch("/brands.json")
@@ -27,13 +26,11 @@ const AuthProvider = ({ children }) => {
       .then((data) => setBrands(data));
   }, []);
 
-  useEffect(() => {
-    fetch(
-      "https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/allproducts"
-    )
+  /*   useEffect(() => {
+    fetch(" https://carvista-server-ppyu3j9u7-tanvirsiraj.vercel.app/allproducts")
       .then((res) => res.json())
       .then((data) => setProducts(data));
-  }, []);
+  }, []); */
 
   const createUser = (email, password) => {
     setLoading(true);
@@ -83,7 +80,6 @@ const AuthProvider = ({ children }) => {
     profileUpdate,
     logOut,
     loading,
-    products,
   };
 
   return (

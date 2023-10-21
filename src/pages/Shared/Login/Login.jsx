@@ -34,6 +34,7 @@ const Login = () => {
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
+        console.log(error);
         setError(error.message);
       });
   };
@@ -42,7 +43,7 @@ const Login = () => {
   const hanldeGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
-        console.log("google signin", result.user);
+        // console.log("google signin", result.user);
         Swal.fire({
           position: "top-center",
           icon: "success",
@@ -102,13 +103,13 @@ const Login = () => {
               required
             />
           </div>
-
+          {error ? <p className="text-red-600  bg-white p-1">{error}</p> : ""}
           <div className="form-control mt-6">
             <button className="btn bg-transparent border-primary-color duration-300 text-white hover:border-white hover:bg-transparent  hover:text-primary-color text-lg md:text-xl capitalize font-semibold">
               Login
             </button>
           </div>
-          <p className="text-red-600">{error}</p>
+
           <p className="text-lg text-white my-4">Or Login with</p>
           <button
             onClick={hanldeGoogleSignIn}

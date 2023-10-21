@@ -6,7 +6,7 @@ const MyCart = () => {
   const [carts, setCarts] = useState([]);
 
   useEffect(() => {
-    fetch("https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/details")
+    fetch(" https://carvista-server-ppyu3j9u7-tanvirsiraj.vercel.app/details")
       .then((res) => res.json())
       .then((data) => setCarts(data));
   }, []);
@@ -37,7 +37,7 @@ const MyCart = () => {
         </div>
       ) : (
         <p className="text-center  lg:text-2xl text-black mx-2 lg:mx-0">
-          You do not added any product...
+          You did not added any product yet...
         </p>
       )}
     </div>

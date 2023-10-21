@@ -19,7 +19,7 @@ const AddProduct = () => {
 
     // sending product to server
     fetch(
-      "https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/addproduct",
+      " https://carvista-server-ppyu3j9u7-tanvirsiraj.vercel.app/addproduct",
       {
         method: "POST",
         headers: {

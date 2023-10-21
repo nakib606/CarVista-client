@@ -9,7 +9,7 @@ const CarBrand = ({ brand }) => {
       </div>
       <div className="text-center mb-4 ">
         <Link
-          to={`/brand/${brandName}`}
+          to={`/allproducts/${brandName}`}
           className="duration-500 font-semibold text-primary-color text-lg"
         >
           {brandName}

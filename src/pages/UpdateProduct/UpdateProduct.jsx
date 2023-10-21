@@ -1,5 +1,5 @@
 import Swal from "sweetalert2";
-import bg from "../../../public/ap-1.jpg";
+import bg from "../../../public/update.jpg";
 import { useLoaderData } from "react-router-dom";
 
 const UpdateProduct = () => {
@@ -31,7 +31,7 @@ const UpdateProduct = () => {
     // console.log(updatedProduct);
     // sending product to server
     fetch(
-      `https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/updated/${loaderData._id}`,
+      ` https://carvista-server-ppyu3j9u7-tanvirsiraj.vercel.app/updated/${loaderData._id}`,
       {
         method: "PUT",
         headers: {

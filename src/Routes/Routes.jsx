@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/brand/:brandname",
+        path: "/allproducts/:brandname",
         element: <BrandProducts></BrandProducts>,
       },
       {
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/details/${params.id}`
+            ` https://carvista-server-ppyu3j9u7-tanvirsiraj.vercel.app/details/${params.id}`
           ),
       },
       {
@@ -62,7 +62,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/update/${params.id}`
+            ` https://carvista-server-ppyu3j9u7-tanvirsiraj.vercel.app/update/${params.id}`
           ),
       },
       {

@@ -1,6 +1,18 @@
 import { Link } from "react-router-dom";
 import banner from "../../../../public/banner.jpg";
+import Swal from "sweetalert2";
 const Banner = () => {
+  const handleLists = () => {
+    Swal.fire({
+      title: "Lists Of Brands",
+      text: "Toyota, Ford, Honda, Tesla, Mercedes-Benz, BMW",
+      showCancelButton: true,
+      showConfirmButton: false,
+      cancelButtonColor: "#d33",
+      cancelButtonText: "Close",
+    });
+  };
+
   return (
     <div
       className="py-28 lg:py-52"
@@ -21,7 +33,7 @@ const Banner = () => {
             sports car or grand tourer.
           </p>
           <Link
-            id="#"
+            onClick={handleLists}
             className="btn bg-primary-color text-white border-none duration-500 hover:bg-white hover:text-primary-color lowercase text-lg"
           >
             cars listing

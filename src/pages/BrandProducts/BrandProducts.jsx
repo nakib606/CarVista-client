@@ -1,20 +1,20 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import BrandProduct from "./BrandProduct";
-import { AuthContext } from "../../context/AuthProvider";
 import Slider from "./Slider";
 
 const BrandProducts = () => {
-  const { products } = useContext(AuthContext);
-  //   console.log(products);
   const { brandname } = useParams();
-  //   console.log(brandname);
+  console.log(brandname);
   const [brandData, setBrandData] = useState([]);
 
   useEffect(() => {
-    const remainingData = products.filter((data) => data.brand === brandname);
-    setBrandData(remainingData);
+    fetch(
+      ` https://carvista-server-ppyu3j9u7-tanvirsiraj.vercel.app/allproducts/${brandname}`
+    )
+      .then((res) => res.json())
+      .then((data) => setBrandData(data));
   }, []);
 
   return (
@@ -27,7 +27,7 @@ const BrandProducts = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 mt-10">
               {brandData.map((data) => (
-                <BrandProduct key={brandData._id} data={data}></BrandProduct>
+                <BrandProduct key={data._id} data={data}></BrandProduct>
               ))}
             </div>
           </div>

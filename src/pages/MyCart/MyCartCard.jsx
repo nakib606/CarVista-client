@@ -18,7 +18,7 @@ const MyCartCard = ({ cart, carts, setCarts }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `https://carvista-server-rdy7xmnrw-tanvirsiraj.vercel.app/addproduct/${id}`,
+          ` https://carvista-server-ppyu3j9u7-tanvirsiraj.vercel.app/addproduct/${id}`,
           {
             method: "DELETE",
           }
